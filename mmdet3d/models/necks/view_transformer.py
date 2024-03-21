@@ -46,6 +46,7 @@ class LSSViewTransformer(BaseModule):
         self.grid_config = grid_config
         self.downsample = downsample
         self.create_grid_infos(**grid_config)
+        self.input_size = input_size
         self.create_frustum(grid_config['depth'], input_size, downsample)
         self.out_channels = out_channels
         self.in_channels = in_channels
